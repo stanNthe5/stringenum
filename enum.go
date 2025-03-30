@@ -15,7 +15,7 @@ import (
 type Config struct {
 	Package string               `yaml:"package"`
 	Output  string               `yaml:"output"`
-	Enums   map[string]yaml.Node `yaml:"enums"` // 修改为yaml.Node类型
+	Enums   map[string]yaml.Node `yaml:"enums"`
 }
 
 // Enum defines the structure for enum values
