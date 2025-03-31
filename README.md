@@ -1,5 +1,8 @@
 # stringEnum
  Go string enums generator. 
+
+## Why
+I often use sum types in TypeScript, and I want to bring the functionalities to Go:
  - Type-safe.
  - A same name can be used in multiple enums.
  - Support short strings (array) and long strings (key/value)
