@@ -10,7 +10,7 @@
 go install github.com/stanNthe5/stringenum@latest
 ```
 
-## Usage
+## Generate Enums
 
 In your Go project folder, create a file named `enums.yaml`.
 Example:
@@ -33,7 +33,30 @@ And run
 ```shell
 stringenum
 ```
-A file named `enums.go` will be generated. You can then use the enums:
+
+A file named `enums.go` will be generated:
+```go
+type ColorsEnum interface {
+	colors()
+	String() string
+}
+
+type DivSizeEnum interface {
+	divsize()
+	String() string
+}
+
+type FontSizeEnum interface {
+	fontsize()
+	String() string
+}
+...
+...
+```
+
+## Use the Enums
+
+You can now use the Enums in your Go file:
 ```go
 func fontSize(s FontSizeEnum) {
 	fmt.Println(s.String())
